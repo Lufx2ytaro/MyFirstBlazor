@@ -76,5 +76,5 @@ C:\Users\Admin\Blazor\obj\Debug\net9.0\Blazor.pdb
 C:\Users\Admin\Blazor\obj\Debug\net9.0\Blazor.genruntimeconfig.cache
 C:\Users\Admin\Blazor\obj\Debug\net9.0\ref\Blazor.dll
 C:\Users\Admin\Blazor\obj\Debug\net9.0\Blazor.sourcelink.json
-C:\Users\Admin\Blazor\obj\Debug\net9.0\compressed\daoq96vlz1-kcixrkdyoh.gz
-C:\Users\Admin\Blazor\obj\Debug\net9.0\compressed\v25gptdevl-kcixrkdyoh.gz
+C:\Users\Admin\Blazor\obj\Debug\net9.0\compressed\daoq96vlz1-aaapnhiuem.gz
+C:\Users\Admin\Blazor\obj\Debug\net9.0\compressed\v25gptdevl-aaapnhiuem.gz

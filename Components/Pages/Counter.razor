@@ -1,13 +1,23 @@
-﻿@page "/counter"
+﻿@page "/calculator"
 @rendermode InteractiveServer
 
-<PageTitle>Counter</PageTitle>
+<PageTitle>Calculator</PageTitle>
 
-<h1>Counter</h1>
+<h1>Simple test Calculator</h1>
 
 <p role="status">Current count: @currentCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="IncrementCount">1</button>
+<button class="btn btn-primary" @onclick="IncrementCount">2</button>
+<button class="btn btn-primary" @onclick="IncrementCount">3</button>
+<button class="btn btn-primary" @onclick="IncrementCount">4</button>
+<button class="btn btn-primary" @onclick="IncrementCount">5</button>
+<button class="btn btn-primary" @onclick="IncrementCount">6</button>
+<button class="btn btn-primary" @onclick="IncrementCount">7</button>
+<button class="btn btn-primary" @onclick="IncrementCount">8</button>
+<button class="btn btn-primary" @onclick="IncrementCount">9</button>
+<button class="btn btn-primary" @onclick="IncrementCount">0</button>
+
 
 @code {
     private int currentCount = 0;
