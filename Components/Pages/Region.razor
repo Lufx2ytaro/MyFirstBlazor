@@ -1,0 +1,15 @@
+@page "/region"
+<PageTitle>CountryRegion</PageTitle>
+
+<h1>Choose YR region</h1>
+<select @bind="region">
+  <option value="Moscow">Moscow</option>
+  <option value="St.Peterburg">St.Peterburg</option>
+  <option value="Obninsk">Obninsk</option>
+</select>
+
+
+
+@code {
+  private string region = "Moscow";
+}
