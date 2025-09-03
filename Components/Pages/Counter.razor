@@ -10,18 +10,25 @@
 <button class="btn btn-primary" @onclick="IncrementCount">1</button>
 <button class="btn btn-primary" @onclick="IncrementCount">2</button>
 <button class="btn btn-primary" @onclick="IncrementCount">3</button>
-<button class="btn btn-primary" @onclick="IncrementCount">4</button>
-<button class="btn btn-primary" @onclick="IncrementCount">5</button>
-<button class="btn btn-primary" @onclick="IncrementCount">6</button>
-<button class="btn btn-primary" @onclick="IncrementCount">7</button>
-<button class="btn btn-primary" @onclick="IncrementCount">8</button>
-<button class="btn btn-primary" @onclick="IncrementCount">9</button>
-<button class="btn btn-primary" @onclick="IncrementCount">0</button>
 
+<h1>CALCULATE A SQUARE</h1>
+
+<p>Enter a number</p>
+<InputNumber @bind-Value="number" />
+<br /><br />
+<button @onclick="CalculateSquare">Посчитать</button>
+
+<p>Результат: @result</p>
 
 @code {
     private int currentCount = 0;
+    private int number;
+    private int result;
 
+    private void CalculateSquare()
+    {
+      result = number * number;
+    }
     private void IncrementCount()
     {
         currentCount++;
