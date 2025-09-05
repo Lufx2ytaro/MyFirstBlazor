@@ -1,36 +1,34 @@
 @page "/tariffs"
+@using Blazor.Models
+@using Blazor.Data
 @rendermode InteractiveServer
+@inject AppDbContext Db
 
-<h1>Тарифы по регионам</h1>
+<h3>Тарифы по регионам (из БД)</h3>
 
 <table class="table">
-  <thead>
-    <tr>
-      <th>Регион</th>
-      <th>Тариф (руб/кВт)</th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach (var t in Tariffs)
-    {
+    <thead>
         <tr>
-          <td>@t.Region</td>
-          <td>@t.Price</td>
+            <th>Регион</th>
+            <th>Тариф (руб/кВт)</th>
         </tr>
-    }
-  </tbody>
+    </thead>
+    <tbody>
+        @foreach (var t in Tariffs)
+        {
+            <tr>
+                <td>@t.Region</td>
+                <td>@t.Price</td>
+            </tr>
+        }
+    </tbody>
 </table>
 
-@code{
-  private List<Tariff> Tariffs = new()
-    {
-      new Tariff{Region = "Moscow",Price = 5.50m},
-      new Tariff{Region = "St.Peterburg",Price = 4.80m},
-      new Tariff{Region = "Obninsk",Price = 4.20m}
-    };
+@code {
+    private List<Tariff> Tariffs = new();
 
-    public class Tariff{
-      public string Region {get; set;}
-      public decimal Price {get; set;}
+    protected override void OnInitialized()
+    {
+        Tariffs = Db.Tariffs.ToList();
     }
 }

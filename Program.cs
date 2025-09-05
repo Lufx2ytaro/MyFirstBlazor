@@ -1,8 +1,16 @@
 using Blazor.Components;
-
+using Microsoft.EntityFrameworkCore;
+using Blazor.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite("Data Source=tariffs.db"));
+
+// стандартные настройки Blazor
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
@@ -25,4 +33,8 @@ app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
+
+
+
 app.Run();
+
