@@ -1,0 +1,36 @@
+@page "/tariffs"
+@rendermode InteractiveServer
+
+<h1>Тарифы по регионам</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Регион</th>
+      <th>Тариф (руб/кВт)</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var t in Tariffs)
+    {
+        <tr>
+          <td>@t.Region</td>
+          <td>@t.Price</td>
+        </tr>
+    }
+  </tbody>
+</table>
+
+@code{
+  private List<Tariff> Tariffs = new()
+    {
+      new Tariff{Region = "Moscow",Price = 5.50m},
+      new Tariff{Region = "St.Peterburg",Price = 4.80m},
+      new Tariff{Region = "Obninsk",Price = 4.20m}
+    };
+
+    public class Tariff{
+      public string Region {get; set;}
+      public decimal Price {get; set;}
+    }
+}
